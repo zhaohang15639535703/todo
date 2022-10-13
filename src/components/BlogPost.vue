@@ -46,6 +46,11 @@ export default {
       return this.title.trim().toLocaleLowerCase()
     }
   },
+  methods:{
+    test(){
+      this.$emit('enlarge-text')
+    }
+  }
 }
 </script>
 

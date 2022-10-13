@@ -40,7 +40,7 @@
     commentIds: Array,
     author: Object,-->
 <!--    绑定多个props这里等价于<BlogPost :title=post.title :isPublished=post.title :commentIds=post.commentIds :author=post.author>-->
-    <BlogPost v-bind="post" @enlarge-text="blogFontSize++" @minify-text="blogFontSize--">
+    <BlogPost v-bind="post" @enlarge-text.once="blogFontSize++" @minify-text="blogFontSize--">
       the author is {{post.author}}
     </BlogPost>
     <input type="text" v-model="post.title">

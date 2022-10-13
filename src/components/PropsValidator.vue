@@ -12,12 +12,17 @@ class Person {
 export default {
   name: "PropsValidator",
   props: {
+    //<!-- 等同于传入 :disabled="true" -->
+    // <MyComponent disabled />
+    // <!-- 等同于传入 :disabled="false" -->
+    // <MyComponent />
+    disabled: Boolean,
     author: Person,
     //props校验
     // 基础类型检查
     //（给出 `null` 和 `undefined` 值则会跳过任何类型检查）
     propA: Number,
-    // 多种可能的类型
+    // 多种可能的类型，可以为String,也可以为Number
     propB: [String, Number],
     // 必传，且为 String 类型
     propC: {
